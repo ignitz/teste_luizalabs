@@ -71,10 +71,13 @@ class WordCountTest():
 
 
 def main():
+    if (len(sys.argv) != 3):
+        raise Exception(
+            "Need two args for CSV filesource and target path where the CSV files will be writed!")
+
     spark = SparkSession.builder.master('local[*]').getOrCreate()
 
-    filesource = "data/wordcount/data.txt"
-    target_path = "output/task1"
+    _, filesource, target_path = sys.argv
 
     # WordCountTest
     wct = WordCountTest(

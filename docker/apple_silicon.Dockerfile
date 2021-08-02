@@ -1,6 +1,7 @@
 FROM --platform=linux/arm/v8 ubuntu:20.04
 
-# A versão ARM está com um bug desconhecido. Será investigado posteriormente.
+# TODO: A versão ARM do macbook está com um bug desconhecido neste docker. Será investigado posteriormente.
+# Tanto no Rosetta 2 ou no nativo ARM erra na execuçao abaixo.
 # Error: Could not find or load main class org.apache.spark.launcher.Main
 # Caused by: java.lang.ClassNotFoundException: org.apache.spark.launcher.Main
 # /opt/spark-3.1.2-bin-hadoop3.2/bin/spark-class: line 96: CMD: bad array subscript

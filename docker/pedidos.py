@@ -41,9 +41,10 @@ class PedidosTest():
             [[x[0], str(x[1])] for x in z]), StringType())
 
         df_aux.withColumn('lista_pedidos', convertStructToArrayUDF(col(
-            'lista_pedidos'))).write.mode('overwrite').csv(f'{self.target_path}/result', header=True)
+            'lista_pedidos'))).write.mode('overwrite').csv(f'{self.target_path}/result/temp', header=True)
 
-        df_csv = self.spark.read.csv(f'{self.target_path}/result', header=True)
+        df_csv = self.spark.read.csv(
+            f'{self.target_path}/result/temp', header=True)
         df_csv.coalesce(1).write.mode('overwrite').csv(
             f'{self.target_path}/result/result_one_file', header=True)
 
