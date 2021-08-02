@@ -20,3 +20,5 @@ Pelo **Google Colab** basta abrir o [notebook](notebooks/Desafio_Luizalabs.ipynb
 
 Pelo **Docker** basta ter o docker instalado, criar a imagem e executar utilizando o script [docker/build_and_run.sh](docker/build_and_run.sh).
 Os arquivos de saída estarão no diretório `output`. (Testado em macOS e Linux Ubuntu 20.04)
+
+Os resultados se encontram na pasta `result` caso tenha algum problema em re-executar o teste.
